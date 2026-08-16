@@ -112,10 +112,10 @@ namespace FrmRegistration
             comboBox1.SelectedIndex = -1;
         }
 
-        public delegate long DelegateNumber(long number);
+        public delegate long DelegateNumber();
 
 
-        public delegate string DelegateText(string txt);
+        public delegate string DelegateText();
 
         public class StudentinfoClass
         {
