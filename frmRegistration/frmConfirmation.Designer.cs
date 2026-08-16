@@ -123,7 +123,6 @@
             label8.Size = new Size(52, 15);
             label8.TabIndex = 7;
             label8.Text = "Address:";
-            label8.Click += this.label8_Click;
             // 
             // lblAddress
             // 
@@ -133,7 +132,6 @@
             lblAddress.Size = new Size(16, 15);
             lblAddress.TabIndex = 15;
             lblAddress.Text = "H";
-            lblAddress.Click += this.lblAddress_Click;
             // 
             // lblContactNo
             // 
@@ -180,7 +178,6 @@
             lblLastName.Size = new Size(15, 15);
             lblLastName.TabIndex = 10;
             lblLastName.Text = "C";
-            lblLastName.Click += this.lblLastName_Click;
             // 
             // lblProgram
             // 
@@ -202,7 +199,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(157, 311);
+            button1.Location = new Point(164, 288);
             button1.Name = "button1";
             button1.Size = new Size(122, 23);
             button1.TabIndex = 16;
@@ -214,7 +211,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 368);
+            ClientSize = new Size(462, 336);
             Controls.Add(button1);
             Controls.Add(lblAddress);
             Controls.Add(lblContactNo);
