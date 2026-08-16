@@ -32,7 +32,7 @@ namespace frmRegistration
             StudentinfoClass.FirstName = txtFirstName.Text;
             StudentinfoClass.MiddleName = txtMiddleName.Text;
             StudentinfoClass.Age = ParseLong(txtAge.Text);
-            StudentinfoClass.ContactNo = ParseLong(txtContactNo.Text);
+            StudentinfoClass.ContactNo = txtContactNo.Text;
             StudentinfoClass.Address = txtAddress.Text;
 
             using (frmConfirmation frmConfirm = new frmConfirmation())
@@ -73,7 +73,7 @@ namespace frmRegistration
             public static string Address { get; set; } = string.Empty;
             public static string Program { get; set; } = string.Empty;
             public static long Age { get; set; } = 0;
-            public static long ContactNo { get; set; } = 0;
+            public static string ContactNo { get; set; } = string.Empty;
             public static long StudentNo { get; set; } = 0;
 
             public static string getFirstName() => FirstName;
@@ -82,7 +82,7 @@ namespace frmRegistration
             public static string getAddress() => Address;
             public static string getProgram() => Program;
             public static long getAge() => Age;
-            public static long getContactNo() => ContactNo;
+            public static string getContactNo() => ContactNo;
             public static long getStudentNo() => StudentNo;
         }
 

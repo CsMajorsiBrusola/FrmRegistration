@@ -12,8 +12,8 @@ namespace frmRegistration
     public partial class frmConfirmation : Form
     {
 
-        private DelegateText DelProgram, DelLastName, DelFirstName, DelMiddleName, DelAddress;
-        private DelegateNumber DelNumAge, DelNumContactNo, DelStudNo;
+        private DelegateText DelProgram, DelLastName, DelFirstName, DelMiddleName, DelAddress, DelNumContactNo;
+        private DelegateNumber DelNumAge, DelStudNo;
 
         public frmConfirmation()
         {
