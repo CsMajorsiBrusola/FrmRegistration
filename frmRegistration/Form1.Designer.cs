@@ -34,17 +34,19 @@
             FirstName = new Label();
             MiddleName = new Label();
             Age = new Label();
-            ContactNo = new Label();
-            Address = new Label();
+            Gender = new Label();
+            Birthday = new Label();
             cbProgram = new ComboBox();
             txtStudentNo = new TextBox();
             txtLastName = new TextBox();
             txtFirstName = new TextBox();
             txtMiddleName = new TextBox();
             txtAge = new TextBox();
-            txtContactNo = new TextBox();
-            txtAddress = new RichTextBox();
-            button1 = new Button();
+            Register = new Button();
+            txtContact = new TextBox();
+            label1 = new Label();
+            txtDate = new DateTimePicker();
+            txtGender = new ComboBox();
             SuspendLayout();
             // 
             // StudentNo
@@ -73,7 +75,6 @@
             LastName.Size = new Size(63, 15);
             LastName.TabIndex = 2;
             LastName.Text = "Last Name";
-            LastName.Click += LastName_Click;
             // 
             // FirstName
             // 
@@ -102,23 +103,23 @@
             Age.TabIndex = 5;
             Age.Text = "Age";
             // 
-            // ContactNo
+            // Gender
             // 
-            ContactNo.AutoSize = true;
-            ContactNo.Location = new Point(249, 147);
-            ContactNo.Name = "ContactNo";
-            ContactNo.Size = new Size(71, 15);
-            ContactNo.TabIndex = 6;
-            ContactNo.Text = "Contact No.";
+            Gender.AutoSize = true;
+            Gender.Location = new Point(249, 147);
+            Gender.Name = "Gender";
+            Gender.Size = new Size(45, 15);
+            Gender.TabIndex = 6;
+            Gender.Text = "Gender";
             // 
-            // Address
+            // Birthday
             // 
-            Address.AutoSize = true;
-            Address.Location = new Point(56, 209);
-            Address.Name = "Address";
-            Address.Size = new Size(49, 15);
-            Address.TabIndex = 7;
-            Address.Text = "Address";
+            Birthday.AutoSize = true;
+            Birthday.Location = new Point(55, 206);
+            Birthday.Name = "Birthday";
+            Birthday.Size = new Size(51, 15);
+            Birthday.TabIndex = 7;
+            Birthday.Text = "Birthday";
             // 
             // cbProgram
             // 
@@ -157,7 +158,7 @@
             txtMiddleName.BorderStyle = BorderStyle.FixedSingle;
             txtMiddleName.Location = new Point(439, 109);
             txtMiddleName.Name = "txtMiddleName";
-            txtMiddleName.Size = new Size(161, 23);
+            txtMiddleName.Size = new Size(79, 23);
             txtMiddleName.TabIndex = 12;
             // 
             // txtAge
@@ -168,49 +169,67 @@
             txtAge.Size = new Size(161, 23);
             txtAge.TabIndex = 13;
             // 
-            // txtContactNo
+            // Register
             // 
-            txtContactNo.BorderStyle = BorderStyle.FixedSingle;
-            txtContactNo.Location = new Point(249, 165);
-            txtContactNo.Name = "txtContactNo";
-            txtContactNo.Size = new Size(161, 23);
-            txtContactNo.TabIndex = 14;
+            Register.Location = new Point(203, 273);
+            Register.Name = "Register";
+            Register.Size = new Size(160, 38);
+            Register.TabIndex = 16;
+            Register.Text = "Register";
+            Register.UseVisualStyleBackColor = true;
+            Register.Click += button1_Click;
             // 
-            // txtAddress
+            // txtContact
             // 
-            txtAddress.BorderStyle = BorderStyle.FixedSingle;
-            txtAddress.Location = new Point(56, 227);
-            txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(544, 96);
-            txtAddress.TabIndex = 15;
-            txtAddress.Text = "";
+            txtContact.BorderStyle = BorderStyle.FixedSingle;
+            txtContact.Location = new Point(292, 224);
+            txtContact.Name = "txtContact";
+            txtContact.Size = new Size(226, 23);
+            txtContact.TabIndex = 18;
             // 
-            // button1
+            // label1
             // 
-            button1.Location = new Point(250, 347);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 23);
-            button1.TabIndex = 16;
-            button1.Text = "Next";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(292, 206);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 15);
+            label1.TabIndex = 17;
+            label1.Text = "Contact No.";
+            // 
+            // txtDate
+            // 
+            txtDate.Location = new Point(55, 224);
+            txtDate.Name = "txtDate";
+            txtDate.Size = new Size(189, 23);
+            txtDate.TabIndex = 19;
+            // 
+            // txtGender
+            // 
+            txtGender.FormattingEnabled = true;
+            txtGender.Items.AddRange(new object[] { "Male", "Female", "Prefer not to say" });
+            txtGender.Location = new Point(249, 165);
+            txtGender.Name = "txtGender";
+            txtGender.Size = new Size(269, 23);
+            txtGender.TabIndex = 20;
             // 
             // frmRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(651, 407);
-            Controls.Add(button1);
-            Controls.Add(txtAddress);
-            Controls.Add(txtContactNo);
+            ClientSize = new Size(561, 340);
+            Controls.Add(txtGender);
+            Controls.Add(txtDate);
+            Controls.Add(txtContact);
+            Controls.Add(label1);
+            Controls.Add(Register);
             Controls.Add(txtAge);
             Controls.Add(txtMiddleName);
             Controls.Add(txtFirstName);
             Controls.Add(txtLastName);
             Controls.Add(txtStudentNo);
             Controls.Add(cbProgram);
-            Controls.Add(Address);
-            Controls.Add(ContactNo);
+            Controls.Add(Birthday);
+            Controls.Add(Gender);
             Controls.Add(Age);
             Controls.Add(MiddleName);
             Controls.Add(FirstName);
@@ -218,7 +237,7 @@
             Controls.Add(Program);
             Controls.Add(StudentNo);
             Name = "frmRegistration";
-            Text = "frmConfirmation";
+            Text = "FrmRegistration";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -232,8 +251,8 @@
         private Label FirstName;
         private Label MiddleName;
         private Label Age;
-        private Label ContactNo;
-        private Label Address;
+        private Label Gender;
+        private Label Birthday;
         private ComboBox cbProgram;
         private TextBox txtStudentNo;
         private TextBox txtLastName;
@@ -241,7 +260,10 @@
         private TextBox txtMiddleName;
         private TextBox txtAge;
         private TextBox txtContactNo;
-        private RichTextBox txtAddress;
-        private Button button1;
+        private Button Register;
+        private TextBox txtContact;
+        private Label label1;
+        private DateTimePicker txtDate;
+        private ComboBox txtGender;
     }
 }
