@@ -58,6 +58,16 @@ namespace FrmRegistration
                     outputFile.WriteLine(Data);
                 }
             }
+
+            cbProgram.SelectedIndex = -1;
+            txtStudentNo.Clear();
+            txtLastName.Clear();
+            txtFirstName.Clear();
+            txtMiddleName.Clear();
+            txtAge.Clear();
+            txtContact.Clear();
+            txtDate.Value = DateTime.Today;
+            txtGender.ResetText();
         }
 
         private void btnRecords_Click(object sender, EventArgs e)
