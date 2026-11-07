@@ -49,7 +49,7 @@ namespace FrmRegistration
                 "Birthday: " + txtDate.Value.ToString("yyyy-MM-dd")
             };
 
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string docPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "StudentRecords");
 
             using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, SetFileName + ".txt")))
             {
@@ -58,6 +58,12 @@ namespace FrmRegistration
                     outputFile.WriteLine(Data);
                 }
             }
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            FrmStudentRecord frmStudentRecord = new FrmStudentRecord();
+            frmStudentRecord.Show();
         }
     }
 }

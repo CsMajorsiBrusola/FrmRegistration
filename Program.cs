@@ -1,4 +1,4 @@
-namespace frmRegistration
+namespace FrmRegistration
 {
     internal static class Program
     {

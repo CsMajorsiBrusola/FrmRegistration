@@ -1,6 +1,6 @@
-﻿namespace frmRegistration
+﻿namespace FrmRegistration
 {
-    partial class frmRegistration
+    partial class frmRegistration : System.Windows.Forms.Form
     {
         /// <summary>
         ///  Required designer variable.
@@ -47,6 +47,7 @@
             label1 = new Label();
             txtDate = new DateTimePicker();
             txtGender = new ComboBox();
+            btnRecords = new Button();
             SuspendLayout();
             // 
             // StudentNo
@@ -212,11 +213,22 @@
             txtGender.Size = new Size(269, 23);
             txtGender.TabIndex = 20;
             // 
+            // btnRecords
+            // 
+            btnRecords.Location = new Point(428, 273);
+            btnRecords.Name = "btnRecords";
+            btnRecords.Size = new Size(90, 38);
+            btnRecords.TabIndex = 21;
+            btnRecords.Text = "Records";
+            btnRecords.UseVisualStyleBackColor = true;
+            btnRecords.Click += btnRecords_Click;
+            // 
             // frmRegistration
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(561, 340);
+            Controls.Add(btnRecords);
             Controls.Add(txtGender);
             Controls.Add(txtDate);
             Controls.Add(txtContact);
@@ -265,5 +277,6 @@
         private Label label1;
         private DateTimePicker txtDate;
         private ComboBox txtGender;
+        private Button btnRecords;
     }
 }
